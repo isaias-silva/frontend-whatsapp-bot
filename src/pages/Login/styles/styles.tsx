@@ -1,5 +1,9 @@
-import styled, { ThemeConsumer } from 'styled-components'
-import { InputHTMLAttributes, ReactElement, FormHTMLAttributes } from 'react'
+import styled from 'styled-components'
+import { InputHTMLAttributes, FormHTMLAttributes } from 'react'
+
+interface InputProps extends InputHTMLAttributes<HTMLInputElement> {}
+interface FormsProps extends FormHTMLAttributes<HTMLFormElement> {}
+
 export const Content = styled.div`
   display: flex;
   flex-direction: row;
@@ -12,7 +16,7 @@ export const Content = styled.div`
   background-color: ${(props) => props.theme.login.backgound};
 `
 
-export const Form = styled.form<FormHTMLAttributes<ReactElement>>`
+export const Form = styled.form<FormsProps>`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -25,7 +29,8 @@ export const Form = styled.form<FormHTMLAttributes<ReactElement>>`
   order: 0;
   flex-grow: 0;
 `
-export const Input = styled.input<InputHTMLAttributes<ReactElement>>`
+
+export const Input = styled.input<InputProps>`
   background: ${(props) => props.theme.login.input};
   height: 30px;
   width: 242px;
@@ -43,14 +48,14 @@ export const DivInputs = styled.div`
   height: 273px;
   input#Button {
     cursor: pointer;
-    background: ${props => props.theme.login.button};
-    color: ${props => props.theme.login.input};
+    background: ${(props) => props.theme.login.button};
+    color: ${(props) => props.theme.login.input};
     font-weight: 900;
     border-radius: 10px;
     width: 200px;
   }
-  input#Button:hover{
-    color: ${props => props.theme.colors.secondary_color};
+  input#Button:hover {
+    color: ${(props) => props.theme.colors.secondary_color};
   }
 `
 export const Label = styled.label`
@@ -68,7 +73,6 @@ export const Label = styled.label`
     padding: 7px;
     background-color: #fff;
   }
- 
 `
 export const DivIconKey = styled.div`
   height: 273px;
@@ -79,5 +83,5 @@ export const DivIconKey = styled.div`
 `
 export const Title = styled.h1`
   font-size: 2em;
-  color: ${props => props.theme.colors.fontColor};
+  color: ${(props) => props.theme.colors.fontColor};
 `
