@@ -11,11 +11,15 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	vertical-align:baseline;
   font-family: sans-serif;
 }
+h1, h2, h3, h4, h5, h6, p {
+	color: ${props => props.theme.colors.fontColor}
+}
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 	display:block;
 }
 body {
 	line-height:1;
+	background-color: ${(props) => props.theme.colors.background};
 }
 abbr[title], dfn[title] {
 	border-bottom:1px dotted;
