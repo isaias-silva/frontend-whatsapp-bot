@@ -14,13 +14,13 @@ function App() {
   }
   return (
     <ContentApp>
-      {/* <Provider store={store}> */}
+      <Provider store={store}>
         <ThemeProvider theme={theme}>
           <GlobalStyle />
           <MenuBar toggleTheme={toggleTheme}/>
           <AppRouters />
         </ThemeProvider>
-      {/* </Provider> */}
+      </Provider>
     </ContentApp>
   )
 }

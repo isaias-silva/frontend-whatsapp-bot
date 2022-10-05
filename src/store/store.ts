@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit'
-import { increment } from './counter/counterSlice'
-const store = configureStore({ reducer: increment })
+import rootReducer from './ducks/rootReducer'
+const store = configureStore({ reducer: rootReducer })
 
 export type RootState = ReturnType<typeof store.getState>
 
