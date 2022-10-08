@@ -1,13 +1,13 @@
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom'
-import App from '../pages/App/App'
+import Dashboard from '../pages/Dashboard/index'
 import Login from '../pages/Login'
 
 const AppRouters = () => {
   return (
     <Router>
       <Routes>
-        <Route path='/login' element={<Login />} />
-        <Route path='/' element={<App />} />
+        <Route path='/' element={<Login />} />
+        <Route path='/dashboard' element={<Dashboard />} />
       </Routes>
     </Router>
   )

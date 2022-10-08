@@ -6,12 +6,14 @@ interface ILogin {
   readonly username: string
   readonly password: string
   readonly data?: []
+  readonly authenticated: boolean
 }
 
 const initialState = {
   username: ' ',
   password: ' ',
   data: [],
+  authenticated: false,
 } as ILogin
 
 const Reducer = createSlice({
