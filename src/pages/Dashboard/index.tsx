@@ -1,22 +1,12 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import AnimationLoading from '../../animations/loadingAnimation'
+import QRcode from '../../components/qrcode'
+import { useSocket } from '../../service/hooks/useSocket'
 
-import { useAxios } from '../../service/hooks/useAxios'
-
-
-function Dashboard(){
-  const [loading, data, error] = useAxios({
-    method: 'GET',
-    url: '',
-  })
-  
-  if (loading) return <AnimationLoading />
-  if (error !== ' ') return <p>{error}</p>
-  if (!data) return <p>dados não encontrados</p>
-
+function Dashboard() {
   return (
     <div>
-      
+      <QRcode />
     </div>
   )
 }

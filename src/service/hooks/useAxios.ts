@@ -4,7 +4,7 @@ import axios, { AxiosRequestConfig } from 'axios'
 export const useAxios = <T>(
   config: AxiosRequestConfig<any>,
   loadOnStart: boolean = true
-): [boolean, T | undefined, string, () => unknown ] => {
+): [boolean, T | undefined, string, () => void ] => {
   const [loading, setLoading] = useState(true)
   const [data, setData] = useState<T>()
   const [error, setError] = useState(' ')
