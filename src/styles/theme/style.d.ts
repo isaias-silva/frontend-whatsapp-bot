@@ -7,7 +7,7 @@ declare module 'styled-components' {
       background: string
     }
     login: {
-      backgound: string
+      background: string
       text: string
       button: string
       input: string

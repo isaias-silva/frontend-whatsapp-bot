@@ -1,10 +1,10 @@
 export const lightTheme = {
   title: 'light',
   menubar: {
-    backgound: '#FFFFF',
+    background: '#FFFFFF',
   },
   login: {
-    backgound: '#FFFFFF',
+    background: '#FFFFFF',
     text: '#000000',
     button: '#694BDB',
     input: '#ffffff',
@@ -22,7 +22,7 @@ export const darkTheme = {
     background: '#151718',
   },
   login: {
-    backgound: '#694BDB',
+    background: '#694BDB',
     text: '#FFFFF',
     button: '#000000',
     input: '#ffffff',

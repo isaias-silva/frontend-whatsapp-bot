@@ -13,7 +13,8 @@ export const Content = styled.div`
   width: 600px;
   height: 320px;
   border-radius: 10px;
-  background-color: ${(props) => props.theme.login.backgound};
+  margin-right:18%;
+  background-color: ${(props) => props.theme.login.background};
 `
 
 export const Form = styled.form<FormsProps>`

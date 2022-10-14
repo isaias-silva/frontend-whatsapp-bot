@@ -11,6 +11,8 @@ interface Props {
 const Div = styled.div`
   align-self: center;
   margin: 0px auto 50px;
+  flex: 1 1 auto;
+  
   #uncheckedIcon {
     color: white;
     margin: 5px 5px auto;
